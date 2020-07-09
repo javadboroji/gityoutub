@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style/style.css">
+    <link rel="stylesheet" href="style/bootstrap.min.css">
+
+    <title>example-1</title>
+</head>
+
+<body>
+    <div class="container">
+        <div class="row d-flex justify-content-center">
+            <div class="col-md-3 p-3 ">
+                <div class="input-group mb-3">
+                    <input id="Fname" type="text" class="form-control inp" placeholder="" aria-label=""
+                        aria-describedby="basic-addon1">
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container">
+        <div class="row d-flex justify-content-center">
+            <div class="col-md-3 p-3 ">
+                <div class="input-group mb-3">
+                    <input id="Lname" type="text" class="form-control inp" placeholder="" aria-label=""
+                        aria-describedby="basic-addon1">
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container">
+        <div class="row d-flex justify-content-center">
+            <div class="col-md-5">
+                <span>firstName : </span> <span id="FnameSpan"></span> <span>lastname :</span> <span
+                    id="LnameSpan"></span>
+            </div>
+        </div>
+    </div>
+
+
+    <script>
+        var FirstName, LastName, textone, texttwo,  inpval;
+        inpval = document.getElementsByClassName("inp");
+        function typeval() {   
+                FirstName = document.getElementById("Fname").value;
+                LastName = document.getElementById("Lname").value;
+
+                textone = document.getElementById("FnameSpan");
+                texttwo = document.getElementById("LnameSpan");
+
+                textone.innerHTML = FirstName;
+                texttwo.innerHTML = LastName;
+
+            }
+            
+
+        for (var i = 0; i <  inpval.length; i++) {
+            
+            inpval[i].addEventListener('keyup',typeval, false);
+        }
+
+    </script>
+    <script src="js/jquery-3.5.1.min.js"></script>
+    <script src="js/main.js"></script>
+</body>
+
+</html>
